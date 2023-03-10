@@ -1,15 +1,38 @@
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  height: 4rem;
+  background-color: #afcbff;
+}
+.footer {
+  height: 4rem;
+  background-color: #0e1c36;
+}
+
 .container {
+  flex-grow: 1;
   background-color: #f9fbf2;
 }
 .bayan {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 50rem;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
   background-color: #d7f9ff;
 }
 
 .bayan-item {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .bayan-item__input {
@@ -21,7 +44,7 @@
 
 .bayan-item__trigger {
   display: block;
-  padding: 20px;
+  padding: 1.5rem;
   border: 1px solid black;
 }
 
