@@ -27,48 +27,38 @@ body {
   background-color: #d7f9ff;
 }
 .bayan-item {
-  position: relative;
   margin-bottom: 1rem;
-}
-.bayan-item__input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-.bayan-item__trigger {
-  display: block;
-  padding: 1.5rem;
   border-bottom: 1px solid #a5a5a5;
 }
-.bayan-item__trigger::after {
-  content: '';
-  position: absolute;
+.bayan-item__input {
+  display: none;
+}
+.bayan-item__trigger {
+  display: inline-block;
+  width: 97%;
+  padding: 1.5rem 0;
+  
+}
+.bayan-item__icon {
   width: 1rem;
   height: 1rem;
-  background-color: #23be20;
-  right: 15px;
-  top: 25px;
 }
-
 .bayan-item__content {
   border: none;
   transition: 0.5s;
   margin-top: -1px;
   overflow: hidden;
   height: 0px;
-  position: relative;
-  z-index: 10;
+  width: 97%;
 }
 
 .bayan-item__input:checked ~ .bayan-item__trigger {
   background-color: #afcbff;
 }
-.bayan-item__input:active ~ .bayan-item__trigger {
+/* .bayan-item__input:active ~ .bayan-item__trigger {
   background-color: #afcbff;
-}
+} */
 .bayan-item__input:checked ~ .bayan-item__content {
-  padding: 1.5rem;
   height: 100px;
   background-color: #ffffff;
 }
@@ -76,12 +66,10 @@ body {
 
 @media (min-width: 820px) {
   .bayan-item__input:checked ~ .bayan-item__content {
-    padding: 1.5rem;
     height: 100px;
     background-color: #ffffff;
   }
   .bayan-item__input:hover ~ .bayan-item__content {
-    padding: 1.5rem;
     height: 100px;
     background-color: #ffffff;
   }
