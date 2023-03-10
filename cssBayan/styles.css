@@ -45,13 +45,13 @@ body {
 .bayan-item__trigger {
   display: block;
   padding: 1.5rem;
-  border: 1px solid black;
+  border-bottom: 1px solid #a5a5a5;
+  
 }
 
 .bayan-item__content {
-  padding: 20px;
-  border: 1px solid black;
-  border-top: 0;
+  padding: 1.5rem;
+  border: none;
   display: none;
 }
 
@@ -61,4 +61,10 @@ body {
 .bayan-item__input:checked ~ .bayan-item__content {
   display: block;
   background-color: #ffffff;
+}
+.bayan-item__input:hover ~ .bayan-item__trigger {
+  background-color: #214b99;
+}
+.bayan-item__input:hover ~ .bayan-item__content {
+  display: block;
 }
