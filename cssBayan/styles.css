@@ -10,10 +10,10 @@ body {
 }
 .header {
   height: 4rem;
-  background-color: #0F7173;
+  background-color: #0f7173;
 }
 .header-title {
-  font-weight:700;
+  font-weight: 700;
   color: #0e1c36;
 }
 .footer {
@@ -22,13 +22,13 @@ body {
 }
 .container {
   flex-grow: 1;
-  background-color: #E7ECEF;
+  background-color: #e7ecef;
 }
 .bayan__wrapper {
   max-width: 50rem;
   margin: 1.5rem auto;
   padding: 0 1rem;
-  background-color: #E7ECEF;
+  background-color: #e7ecef;
 }
 
 .bayan {
@@ -44,34 +44,31 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 1.5rem;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  letter-spacing:0.2rem;
-  background-color: #E7ECEF;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 0.2rem;
+  background-color: #e7ecef;
   border: none;
   color: #0e1c36;
   padding: 1rem;
   border-bottom: 0.0625rem solid #9f9f9f;
 }
-.bayan__header:hover {
-  background-color: #0F7173;
-  color: #0e1c36;
-  cursor: pointer;
-}
+
 .bayan input:checked ~ .bayan__header {
-  background: #F05D5E;
+  background: #f05d5e;
   color: white;
 }
 .bayan input:checked ~ .bayan__header:hover {
-  background-color: #F05D5E;
+  background-color: #f05d5e;
   color: white;
 }
-.icon {
+
+.bayan__icon-plus {
+  display: block;
   width: 1rem;
   height: 1rem;
   opacity: 0.7;
-}
-.bayan__icon-plus {
-  display: block;
+  transition: all 0.5s ease;
 }
 .bayan__icon-close {
   display: none;
@@ -79,55 +76,44 @@ body {
 
 .bayan__content {
   border: none;
-  display: none;
-  padding: 1rem;
+  padding: 0 1rem;
   cursor: pointer;
 }
 .bayan__content-wrapper {
- display: flex;
- justify-content: center;
-
+  display: flex;
+  justify-content: center;
+  max-height: 0;
+  transition: all 0.5s ease-in;
 }
 .bayan__content-img {
+  padding: 1rem 0;
   max-width: 50%;
   max-height: 50%;
 }
 
-.bayan input:hover ~ .bayan__header .bayan__icon-plus {
-  display: none;
+.bayan input:checked ~ .bayan__content .bayan__content-wrapper {
+  max-height: 30rem;
 }
-.bayan input:hover ~ .bayan__header .bayan__icon-close {
+
+@media (min-width: 1181px) {
+  .bayan__header:hover {
+    background-color: #0f7173;
+    color: #0e1c36;
+    cursor: pointer;
+  }
+  .bayan__icon-plus {
+    display: none;
+  }
+  .bayan__wrapper:hover .bayan__header .bayan__icon-plus {
     display: block;
-    animation: fade_in 0.5s;
-}
-
-.bayan input:hover ~ .bayan__content {
-  display: block;
-  animation: fade_in 0.5s;
-}
-.bayan input:checked ~ .bayan__content {
-  display: block;
-  animation: fade_in 0.5s;
-}
-
-@media (min-width: 820px) {
-  .bayan-item__input:checked ~ .bayan-item__content {
-    height: 100%;
-    background-color: #ffffff;
   }
-  .bayan-item__input:hover ~ .bayan-item__content {
-    height: 100%;
-    background-color: #ffffff;
+  .bayan input:hover ~ .bayan__header .bayan__icon-plus {
+    transform: rotate(45deg);
   }
-}
-
-@keyframes fade_in {
-  0% {
-    opacity: 0;
-    transform: scale(0);
+  .bayan input:checked ~ .bayan__header .bayan__icon-plus {
+    transform: rotate(45deg);
   }
-  100% {
-    opacity: 1;
-    transform: scale(1);
+  .bayan input:hover ~ .bayan__content .bayan__content-wrapper {
+    max-height: 30rem;
   }
 }
