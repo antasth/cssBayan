@@ -2,6 +2,10 @@ html,
 body {
   height: 100%;
 }
+html {
+  overflow-x: hidden;
+  width: 100vw;
+}
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -96,7 +100,8 @@ body {
   max-height: 30rem;
 }
 
-@media (min-width: 1181px) {
+
+  @media screen and (hover: hover) {
   .bayan__header {
     color: #00b4d8;
     transition: color 0.4s ease;
@@ -130,14 +135,8 @@ body {
     transition: all 0.1s ease-in;
   }
   .bayan:active .bayan__header span{
-    color: #D8A47F;
+    color: #0096c7;
     transition: all 0.1s ease-in;
-  }
-  .bayan__header {
-    font-size: 1.6rem;
-  }
-  .header-title {
-    font-size: 2.3rem;
   }
 }
 
@@ -147,5 +146,14 @@ body {
   }
   .header-title {
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 1181px) {
+  .bayan__header {
+    font-size: 1.6rem;
+  }
+  .header-title {
+    font-size: 2.3rem;
   }
 }
