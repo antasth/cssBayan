@@ -66,9 +66,6 @@ body {
   opacity: 0.7;
   transition: all 0.5s ease;
 }
-.bayan__icon-close {
-  display: none;
-}
 .bayan__content {
   border: none;
   padding: 0 1rem;
@@ -106,7 +103,6 @@ body {
 
   .bayan__icon {
     opacity: 0;
-    transition: opacity 0.3s ease-in;
   }
   .bayan__wrapper:hover .bayan__header .bayan__icon {
     opacity: 1;
