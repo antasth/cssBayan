@@ -50,6 +50,7 @@ body {
   border: none;
   color: #0e1c36;
   padding: 1rem;
+  border-bottom: 0.0625rem solid #9f9f9f;
 }
 .bayan__header:hover {
   background-color: #0F7173;
@@ -77,17 +78,21 @@ body {
 }
 
 .bayan__content {
-  display: flex;
-  justify-content: center;
   border: none;
   display: none;
   padding: 1rem;
-
   cursor: pointer;
 }
-.bayan__content-img {
- align-self: center;
+.bayan__content-wrapper {
+ display: flex;
+ justify-content: center;
+
 }
+.bayan__content-img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
 .bayan input:hover ~ .bayan__header .bayan__icon-plus {
   display: none;
 }
