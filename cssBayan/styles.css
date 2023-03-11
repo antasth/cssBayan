@@ -2,10 +2,6 @@ html,
 body {
   height: 100%;
 }
-html {
-  overflow-x: hidden;
-  width: 100vw;
-}
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -16,7 +12,7 @@ html {
   height: 4rem;
   background-color: #0f7173;
 }
-.header-title {
+.bayan-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: #0e1c36;
@@ -39,15 +35,12 @@ html {
   padding: 0 1rem;
   background-color: #e7ecef;
 }
-
 .bayan {
   display: block;
 }
-
 .bayan input {
   display: none;
 }
-
 .bayan__header {
   display: flex;
   justify-content: space-between;
@@ -58,7 +51,6 @@ html {
   padding: 1rem 0.5rem;
   border-bottom: 0.0625rem solid #9f9f9f;
 }
-
 .bayan input:checked ~ .bayan__header {
   background: #f05d5e;
   color: white;
@@ -67,8 +59,7 @@ html {
   background-color: #f05d5e;
   color: white;
 }
-
-.bayan__icon-plus {
+.bayan__icon {
   display: block;
   width: 1.3rem;
   height: 1.3rem;
@@ -78,7 +69,6 @@ html {
 .bayan__icon-close {
   display: none;
 }
-
 .bayan__content {
   border: none;
   padding: 0 1rem;
@@ -89,6 +79,7 @@ html {
   justify-content: center;
   max-height: 0;
   transition: max-height 0.3s ease-in-out;
+  transition-delay: 0.2s;
 }
 .bayan__content-img {
   padding: 1rem 0;
@@ -113,17 +104,17 @@ html {
     color: #0e1c36;
   }
 
-  .bayan__icon-plus {
+  .bayan__icon {
     opacity: 0;
     transition: opacity 0.3s ease-in;
   }
-  .bayan__wrapper:hover .bayan__header .bayan__icon-plus {
+  .bayan__wrapper:hover .bayan__header .bayan__icon {
     opacity: 1;
   }
-  .bayan input:hover ~ .bayan__header .bayan__icon-plus {
+  .bayan input:hover ~ .bayan__header .bayan__icon {
     transform: rotate(45deg);
   }
-  .bayan input:checked ~ .bayan__header .bayan__icon-plus {
+  .bayan input:checked ~ .bayan__header .bayan__icon {
     transform: rotate(45deg);
   }
   .bayan input:hover ~ .bayan__content .bayan__content-wrapper {
@@ -143,7 +134,7 @@ html {
   .bayan__wrapper {
     font-size: 1.3rem;
   }
-  .header-title {
+  .bayan-title {
     font-size: 2rem;
   }
 }
@@ -152,7 +143,7 @@ html {
   .bayan__header {
     font-size: 1.6rem;
   }
-  .header-title {
+  .bayan-title {
     font-size: 2.3rem;
   }
 }
