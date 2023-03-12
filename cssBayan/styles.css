@@ -81,13 +81,14 @@ body {
   transition-delay: 0.2s;
 }
 .bayan__content-img {
-  padding: 1rem 0;
+  padding: 0;
   max-width: 80%;
   max-height: 80%;
 }
 
 .bayan input:checked ~ .bayan__content .bayan__content-wrapper {
   max-height: 30rem;
+  padding: 1rem 0;
   opacity: 1;
 }
 
@@ -117,6 +118,7 @@ body {
   }
   .bayan input:hover ~ .bayan__content .bayan__content-wrapper {
     max-height: 30rem;
+    padding: 1rem 0;
     opacity: 1;
   }
   .bayan:active {
